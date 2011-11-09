@@ -1,0 +1,13 @@
+parameters:
+    xnni_twig_extension.date.class: Xnni\Bundle\TwigExtensionBundle\Twig\Extension\DateExtension
+    xnni_twig_extension.number.class: Xnni\Bundle\TwigExtensionBundle\Twig\Extension\NumberExtension
+
+services:
+    twig.extension.xnni_twig_date:
+        class: %xnni_twig_extension.date.class%
+        tags:
+            - { name: twig.extension }
+    twig.extension.xnni_twig_number:
+        class: %xnni_twig_extension.number.class%
+        tags:
+            - { name: twig.extension }
